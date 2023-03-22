@@ -1,0 +1,461 @@
+:root{
+    --purple: #6E46CC;
+    --green: #51B599;
+    --card-background: #F9F4EA;
+    --orange: #F19460;
+    --background: #3A3C63;
+    --blue: #5950D2;
+    --red: rgb(185, 43, 43);
+    --dark-green: green;
+    --yellow: #FAB617;
+    --boy-blue: #6E9FD7;
+    --girl-pink: #F8B9D4;
+    --hold-green: #51A653;
+    --break-green: #00DC32;
+    --conceded-red: #AD4D4D;
+    --broken-red: #E9111C;
+
+    --border-radius-3: 0.3em;
+    --column-gap-6: 0.6em;
+    --row-gap-1: 1em;
+    --cell-gap-4: 0.4em;
+    --cell-gap-8: 0.8em;
+    --cell-padding-4: 0.4em 0.6em;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    background-color: #040A3E;
+}
+
+.page-top {
+    display: flex;
+    flex-direction: row;
+}
+
+/* scoreboard */
+
+.scoreboard {
+    margin: 1.5rem;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1rem;
+    height: 16rem;
+}
+
+.scoreboard-head {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: .3rem;
+}
+
+.scoreboard-division {
+    background: linear-gradient(180deg, #FF0000 0%, #0500FF 100%);
+    color: white;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+.live-scoreboard {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    align-items: flex-end;
+}
+
+.live-score {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.scoreboard-teams {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    gap: 1rem;
+}
+
+.team1 {
+    align-items: flex-end;
+}
+
+.team2 {
+    align-items: flex-start;
+}
+
+.flags {
+    height: 2.5rem;
+}
+
+.game-stats {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.icons {
+    width: 1rem;
+}
+
+/* scoreline */
+
+.scoreline {
+    background-color: white;
+    width: 97%;
+    border-radius: 15px;
+    margin: 1.5rem;
+    padding: 0 0 1rem 0;
+}
+
+.scoreline-legend {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: space-evenly;
+    background-color: lightgrey;
+    height: 2rem;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.scoreline-legend div {
+    display: flex;
+    flex-direction: row;
+    gap: 2.8rem;
+}
+
+.points {
+    margin-top: .5rem;
+}
+
+.point {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.point-stat {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.current-score {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.frisbee {
+    height: 23px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+
+/* addScore */
+
+.addScore {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20%;
+    background-color: white;
+    height: 16rem;
+    border-radius: 15px;
+    margin: 1.5rem;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.addScore section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: turquoise;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.addScore input {
+    display: inline-block;
+}
+
+.buttons {
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+button {
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 4px 4px gray;
+    font-size: 20px;
+}
+
+.teamOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.addStats {
+    display: flex;
+    flex-direction: column;
+}
+
+button:active {
+    background-color: turquoise;
+    color: white;
+    border: white;
+    box-shadow: none;
+}
+
+
+/* player-legend */
+
+.player-legend {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: white;
+    height: 16rem;
+    border-radius: 15px;
+    margin: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.goals {
+    background-color: #008000;
+    color: white;
+}
+
+.assist {
+    background-color: #5950D2;
+    color: white;
+}
+
+.blocks {
+    background-color: #B92B2B;
+    color: white;
+}
+
+.turnover {
+    background-color: #FAB617;
+    color: black;
+}
+
+.example {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    width: 6rem;
+    height: 6rem;
+    border: 10px;
+    font-weight: 700;
+}
+
+
+/* player-list */
+
+/* Player section */
+.players{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--card-background);
+    border-radius: var(--border-radius-3);
+    padding: 0.8em 0.6em;
+    row-gap: 0.8em;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.75);
+}
+
+.team-players{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8em;
+}
+
+.team-name-heading{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.player-card{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* border: solid 1px black; */
+    border-radius: var(--border-radius-3);
+    /* padding: 0.4em; */
+    position: relative;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.45);
+    min-height: 3.5em;
+}
+
+.player-card:nth-child(even){
+    background: rgb(239, 239, 239);
+}
+
+.player-card:nth-child(odd){
+    background: rgb(204, 204, 204);
+}
+
+.flex-reversed{
+    flex-direction: row;
+}
+
+.player-stats{
+    display:flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-between;
+    padding: 0.4em;
+    margin-left: 15%;
+}
+
+.stats-reversed{
+    flex-direction: row;
+}
+
+.jersey-num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    padding: 1.1em 0;
+    font-weight: 500;
+    border-top-left-radius: var(--border-radius-3);
+    border-bottom-left-radius: var(--border-radius-3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.gender-M{
+    background: var(--boy-blue);
+}
+
+.gender-F{
+    background: var(--girl-pink);
+}
+
+.player-name-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.player-name-wrapper{
+    display: flex;
+}
+
+.player-name-wrapper-reversed{
+    flex-direction: row;
+}
+
+.player-name{
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0 0 0 0.4em;
+}
+
+
+@media (min-width: 48rem){
+
+    /* Player section */
+    .players{
+        grid-area: Players;
+        align-content: flex-start;
+        margin: 0 0 auto 0;
+        flex-direction: row;
+        column-gap: 0.8em;
+    }
+
+    .reverse{
+        text-align: right;
+    }
+
+    .player-name-container-reversed{
+        align-items: flex-end;
+    }
+
+    .player-name{
+        padding: 0 0.4em 0 0.4em;
+    }
+
+    .player-name-wrapper-reversed{
+        flex-direction: row-reverse;
+    }
+
+    .flex-reversed{
+        flex-direction: row-reverse;
+        margin-left: 0;
+        margin-right: 15%;
+    }
+
+    .num-reversed{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: var(--border-radius-3);
+        border-bottom-right-radius: var(--border-radius-3);
+    }
+
+}

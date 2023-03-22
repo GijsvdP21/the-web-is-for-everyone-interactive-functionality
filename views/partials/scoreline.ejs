@@ -1,0 +1,70 @@
+<section class="scoreline">
+    <div class="scoreline-legend">
+        <div>
+            <h4>
+                Pass
+            </h4>
+            <h4>
+                Turn
+            </h4>
+            <h4>
+                O/D
+            </h4>
+        </div>
+        <p>
+            possesion
+        </p>
+        <h4>
+           Scoreline
+        </h4>
+        <p>
+            possesion
+        </p>         
+        <div>
+            <h4>
+                O/D
+            </h4>
+            <h4>
+                Turn
+            </h4>
+            <h4>
+                Pass
+            </h4>
+        </div>
+    </div>
+    <div class="points">
+        <% parsedStats.scoredPoints.forEach(scoreStat => { %>
+            <div class="point">
+                <div class="point-stat">
+                    <p>
+                        <%- scoreStat.team1Passes %>
+                    </p>
+                    <p>
+                        <%- scoreStat.team1Turnovers %>
+                    </p>
+                    <p>
+                        <%- scoreStat.team1OorD %>
+                    </p>
+                </div>
+                <img <% if (scoreStat.startedOnOffence === 'Pretend Team') {%> class="hide frisbee pos1"<% } else {%> class="frisbee pos1"<% } %> src="/images/game-icons_frisbee.jpg" alt="">
+                <div class="current-score">
+                    <p><%- scoreStat.team1Score %></p>
+                    <p>-</p>
+                    <p><%- scoreStat.team2Score %></p>
+                </div>
+                <img <% if (scoreStat.startedOnOffence === 'Fakers') {%> class="hide frisbee pos2"<% } else {%> class="frisbee pos2"<% } %> src="/images/game-icons_frisbee.jpg" alt="">
+                <div class="point-stat">
+                    <p>
+                        <%- scoreStat.team2OorD %>
+                    </p>
+                    <p>
+                        <%- scoreStat.team2Turnovers %>
+                    </p>
+                    <p>
+                        <%- scoreStat.team2Passes %>
+                    </p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>

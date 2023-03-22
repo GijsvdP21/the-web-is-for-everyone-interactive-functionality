@@ -1,0 +1,49 @@
+<section class="scoreboard">
+    <div class="scoreboard-head">
+        <h1>
+            <%- data.gameStatus %>
+        </h1>
+        <h2 class="scoreboard-division">
+            <%- data.division %>
+        </h2>
+    </div>
+    <div class="live-scoreboard">
+        <div class="scoreboard-teams team1">
+            <img class="flags" src="https://flagcdn.com/<%- data.team1CountryISO2Code %>.svg" alt="flag from <%- data.team1CountryName %>">
+            <h3>
+                <%- data.team1Name %> (<%- data.team1CountryOlympicCode %>)
+            </h3>
+        </div>
+        <div class="live-score">
+            <p><%- parsedStats.team1Score %></p>
+            <p>-</p>
+            <p><%- parsedStats.team2Score %></p>
+        </div>
+        <div class="scoreboard-teams team2">
+            <img class="flags" src="https://flagcdn.com/<%- data.team2CountryISO2Code %>.svg" alt="flag from <%- data.team2CountryName %>">
+            <h3>
+                <%- data.team2Name %> (<%- data.team2CountryOlympicCode %>)
+            </h3>
+        </div>
+    </div>
+    <div class="game-stats">
+        <div class="game-info">
+            <img class="icons" src="/images/broadcast-icon.jpg" alt="">
+            <p>
+                <%- data.broadcaster %>
+            </p>
+        </div>
+        <div class="game-info">
+            <img class="icons" src="/images/pitch-icon.jpg" alt="">
+            <p>
+                <%- data.field %>
+            </p>
+        </div>
+        <div class="game-info">
+            <img class="icons" src="/images/id-icon.jpg" alt="">
+            <p>
+                <%- data.gameId %>
+            </p>
+        </div>
+    </div>
+</section>
