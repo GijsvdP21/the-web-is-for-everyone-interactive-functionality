@@ -11,6 +11,14 @@
     </section>
     <%- include ('./partials/scoreline') %>
 
+    <div class="players">
+        <!-- Team one players -->
+        <%- include ('./partials/playerlist/team1Players', {data:data}) %>
+
+        <!-- Team two players -->
+        <%- include ('./partials/playerlist/team2Players', {data:data}) %>
+    </div>
+
 </main>
 
 
