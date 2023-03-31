@@ -68,6 +68,24 @@ app.get('/', async (req, res) => {
     }    
 })
 
+app.post('/new', (request, response) => {
+    console.log(request.body)
+    postJson(`${url}/urls`, request.body).then((data) => {
+      let newURL = { ...request.body }
+  
+      if (data.success) {
+        response.redirect('/?urlPosted=true')
+      } else {
+        const errorMessage = data.message
+        const newData = { error: errorMessage, values: newURL }
+  
+        fetchJson(`${url}/websites`).then((data) => {
+          response.render('projects', { data: data, active: '/projects' })
+        })
+      }
+    })
+})
+
 app.set('port', process.env.PORT || 8000)
 
 app.listen(app.get('port'), function () {

@@ -14,32 +14,32 @@
             <div class="player-stats">
                 <% if (player.pronounced !== null) { %>
                     <div class="player-name-container">
-                        <% if (player.hasInformation) { %>
+                        
                             <div class="player-name-wrapper">
-                                <p class="player-name" id="<%- player.playerId %>"><%- player.name %></p>
+                                <!-- <p class="player-name" id="<%- player.playerId %>"><%- player.name %></p> -->
 
                                 <!-- Form fetch data per player & modal with extra information -->
-                                <%- include('./extraPlayerInfo', {player:player}) %>
+                                <section data-name="<%= player.name %>" data-id="<%= player.playerId %>" class="members extra-info">
+                                    i
+                                </section>
 
                             </div>
-                        <% } else { %>
-                            <p class="player-name"><%- player.name %></p>
-                        <% } %>
+                  
                         <p class="player-pronounced"><%- player.pronounced %></p>
                     </div>
                 <% } else{ %>
                     <div class="player-name-container">
-                        <% if (player.hasInformation) { %>
+    
                             <div class="player-name-wrapper">
                                 <p class="player-name" id="<%- player.playerId %>"><%- player.name %></p>
 
                                 <!-- Form fetch data per player & modal with extra information -->
-                                <%- include('./extraPlayerInfo', {player:player}) %>
+                                <section data-name="<%= player.name %>" data-id="<%= player.playerId %>" class="members extra-info">
+                                    i
+                                </section>
 
                             </div>                       
-                        <% } else { %>
-                            <p class="player-name"><%- player.name %></p>
-                        <% } %>
+                
                     </div>
                 <% } %>
 

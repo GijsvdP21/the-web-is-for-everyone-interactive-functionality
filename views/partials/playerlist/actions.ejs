@@ -1,5 +1,5 @@
 <% 
-let goal =  parsedStats.scoredPoints.filter(sp => sp.scoredBy === player.playerId).length 
+let goal =  parsedStats.scoredPoints.filter(sp => sp.scoredBy === player.playerId).length
 let assist = parsedStats.scoredPoints.filter(sp => sp.assistBy === player.playerId).length
 
 let block = parsedStats.scoredPoints.reduce((count, sp) => {
@@ -10,7 +10,7 @@ let turnover = parsedStats.scoredPoints.reduce((count, sp) => {
     return (sp.turnoverPlayers ? count = count + sp.turnoverPlayers.filter(tp => tp === player.playerId).length : count = 0)
 }, 0);
 
-const actions = ["goal", "assist", "block", "turnover"] 
+const actions = ["goal", "assist", "block", "turnover"]
 
 actions.forEach(action => {
     if (eval(action) > 0) { %>
