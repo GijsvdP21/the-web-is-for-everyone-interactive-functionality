@@ -36,6 +36,9 @@ html {
 .page-top {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 /* scoreboard */
@@ -43,13 +46,14 @@ html {
 .scoreboard {
     margin: 1.5rem;
     background-color: white;
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
     height: 16rem;
+    gap: 3%;
 }
 
 .scoreboard-head {
@@ -69,8 +73,8 @@ html {
 .live-scoreboard {
     display: flex;
     flex-direction: row;
-    gap: 8rem;
-    align-items: flex-end;
+    gap: 15%;
+    align-items: center;
 }
 
 .live-score {
@@ -102,7 +106,6 @@ html {
 }
 
 .game-stats {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
