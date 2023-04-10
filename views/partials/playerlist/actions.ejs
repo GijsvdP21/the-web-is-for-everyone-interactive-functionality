@@ -14,8 +14,8 @@ const actions = ["goal", "assist", "block", "turnover"]
 
 actions.forEach(action => {
     if (eval(action) > 0) { %>
-        <p class="<%- action %>"><%- eval(action) %></p>
+        <p class="<%- action %>2" title="<%- eval(action) %> <%- action %><% if (eval(action) != 1) {%>s<%}%>"><%- eval(action) %></p>
     <% } else { %>
-        <p class="<%- action %> reduced-opacity"><%- eval(action) %></p>
+        <p class="<%- action %>2 reduced-opacity" title="<%- eval(action) %> <%- action %>s"><%- eval(action) %></p>
     <% }
 }) %>

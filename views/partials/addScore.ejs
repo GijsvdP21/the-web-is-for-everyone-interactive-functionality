@@ -7,11 +7,107 @@
                 <label><input type="radio" name="options"><%- data.team2Name %></label>
             </div>
             <div class="addStats">
-                <label><input type="checkbox">Goals</label>
-                <label><input type="checkbox">Assist</label>
-                <label><input type="checkbox">Blocks</label>
-                <label><input type="checkbox">Turnover</label>
-                <label><input type="checkbox">Pass</label>
+                <label><input class="checkboxGoal" type="checkbox" onclick="AddGoal()">Goal</label>   
+                <div class="goalMore">
+                    <select class="team1">
+                        <option value="">player...</option> 
+                        <% data.team1Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                    <select class="team2">
+                        <option value="">player...</option> 
+                        <% data.team2Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <label><input class="checkboxAssist" type="checkbox" onclick="AddAssist()">Assist</label>   
+                <div class="assistMore">
+                    <select class="team1">
+                        <option value="">player...</option> 
+                        <% data.team1Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                    <select class="team2">
+                        <option value="">player...</option> 
+                        <% data.team2Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <label><input class="checkboxBlock" type="checkbox" onclick="AddBlock()">Block</label>   
+                <div class="blockMore">
+                    <select class="team1">
+                        <option value="">player...</option> 
+                        <% data.team1Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                    <select class="team2">
+                        <option value="">player...</option> 
+                        <% data.team2Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <label><input class="checkboxTurnover" type="checkbox" onclick="AddTurnover()">Turnover</label>   
+                <div class="turnoverMore">
+                    <select class="team1">
+                        <option value="">player...</option> 
+                        <% data.team1Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                    <select class="team2">
+                        <option value="">player...</option> 
+                        <% data.team2Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <label><input class="checkboxPass" type="checkbox" onclick="AddPass()">Pass</label>   
+                <div class="passMore">
+                    <select class="team1">
+                        <option value="">player...</option> 
+                        <% data.team1Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                    <select class="team2">
+                        <option value="">player...</option> 
+                        <% data.team2Players.forEach(player => { %>
+                        <option value="">                        
+                            <%- player.jerseyNumber %>. <%- player.name %>                        
+                        </option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                
             </div>
         </div>
         <div class="buttons">

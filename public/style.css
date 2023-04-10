@@ -41,6 +41,45 @@ html {
     flex-wrap: wrap;
 }
 
+nav {
+    display: flex;
+    position: relative;
+    height: 4rem;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    margin-bottom: 2rem;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 4rem;
+}
+
+nav img {
+    height: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav a:active {
+    color: orange;
+}
+
+.active {
+    color: orange;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* scoreboard */
 
 .scoreboard {
@@ -192,11 +231,15 @@ html {
     justify-content: space-around;
     width: 18.6rem;
     background-color: white;
-    height: 16rem;
     border-radius: 15px;
     margin: 1.5rem;
     align-items: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.addScore h2 {
+    margin-bottom: 1rem;
 }
 
 .addScore section {
@@ -216,6 +259,8 @@ html {
     color: white;
     padding: 1rem;
     border-radius: 20px;
+    width: 10rem;
+    max-width: 10rem;
 }
 
 .addScore input {
@@ -259,6 +304,33 @@ button:active {
     box-shadow: none;
 }
 
+.goalMore {
+    display: none;
+}
+
+.assistMore {
+    display: none;
+}
+
+.blockMore {
+    display: none;
+}
+
+.turnoverMore {
+    display: none;
+}
+
+.passMore {
+    display: none;
+}
+
+.pen {
+    display: block;
+}
+
+select {
+    width: 8.5rem;
+}
 
 /* player-legend */
 
@@ -495,22 +567,22 @@ button:active {
     font-size: 0.9em;
 }
 
-.goal{
+.goal2{
     background: var(--dark-green);
     color: white;
 }
 
-.assist{
+.assist2 {
     background: var(--blue);
     color: white;
 }
 
-.block{
+.block2{
     background: var(--red);
     color: white;
 }
 
-.turnover{
+.turnover2{
     background: var(--yellow);
     color: black;
 }
